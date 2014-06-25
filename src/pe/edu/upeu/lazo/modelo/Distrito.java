@@ -10,16 +10,16 @@ package pe.edu.upeu.lazo.modelo;
  *
  * @author alum.fial7
  */
-public class Disitrito {
+public class Distrito {
     private int idd;
     private int idr;
     private String dist;
     private String estado;
 
-    public Disitrito() {
+    public Distrito() {
     }
 
-    public Disitrito(int idr, String dist, String estado) {
+    public Distrito(int idr, String dist, String estado) {
         this.idr = idr;
         this.dist = dist;
         this.estado = estado;

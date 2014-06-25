@@ -6,10 +6,29 @@
 
 package pe.edu.upeu.lazo.config;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author alum.fial7
  */
 public class Conexion {
+    private static Connection conex = null;
+    private static String url = "jdbc:mysql://localhost/bd_visitas";
+    private static String usuario = "root";
+    private static String clave = "root";
+    
+    public static Connection GetConex(){
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            conex = DriverManager.getConnection(url, usuario, clave);
+        } catch (ClassNotFoundException | SQLException ex) {
+                JOptionPane.showMessageDialog(null, ex);
+        }
+        return conex;
+    }
     
 }
