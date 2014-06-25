@@ -11,5 +11,8 @@ package pe.edu.upeu.lazo.modelo;
  * @author alum.fial7
  */
 public class Disitrito {
-    
+    private int idd;
+    private int idr;
+    private String dist;
+    private String estado;
 }
